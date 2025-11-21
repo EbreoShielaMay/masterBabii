@@ -1,3 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LoginFormPractice</string>
+    <string name="app_name">SleepWell</string>
+    <string name="app_name_display">SleepWell</string>
+    <string name="subtitle_main">Your Health &amp; Well-Being Companion</string>
+    <string name="subtitle_secondary">Track your sleep, improve your life</string>
+    <string name="btn_login">Login to Your Account</string>
+    <string name="btn_register">Create New Account</string>
+    <string name="footer_sdg">SDG 3: Health &amp; Well-Being Tracker</string>
+    <string name="footer_message">Promoting healthy sleep habits for better well-being</string>
+    <string name="logo_description">SleepWell app logo</string>
+    <string name="moon_icon_description">Moon icon</string>
 </resources>

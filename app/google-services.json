@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "720938138118",
+    "firebase_url": "https://mobcom-cce92-default-rtdb.firebaseio.com",
+    "project_id": "mobcom-cce92",
+    "storage_bucket": "mobcom-cce92.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720938138118:android:f8e1332b73359aa5f5a187",
+        "android_client_info": {
+          "package_name": "com.example.loginformpractice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDfOY2rSeZrjaEvIo7f_MNlTQxB35r75U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

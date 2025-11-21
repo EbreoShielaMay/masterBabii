@@ -1,115 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backg"
-    android:gravity="center"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:gravity="center">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-160dp"
-        android:background="@drawable/transparaent_background"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="25dp">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Create Your Account"
-            android:textColor="@color/white"
-            android:textSize="30sp">
-
-        </TextView>
-
-        <EditText
-            android:id="@+id/name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Name"
-            android:inputType="text"
-            android:padding="18dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp" />
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp"
+            android:background="@color/sky_light_pink">
 
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Email"
-            android:inputType="text"
-            android:padding="18dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp" />
+            <!-- Logo and Title Section -->
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="32dp">
 
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Username"
-            android:inputType="text"
-            android:padding="18dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/logo_gradient_bg"
+                    android:contentDescription="Logo Background" />
 
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="18dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp" />
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="104dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_dreamcatcher"
+                    android:contentDescription="Moon Icon"
+                    app:tint="@color/highlight_white" />
 
-        <EditText
-            android:id="@+id/confirmation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/rounded_corner"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:padding="18dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp" />
+            </FrameLayout>
 
-        <Button
-            android:id="@+id/user_register_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32sp"
-            android:backgroundTint="@color/lavender"
-            android:padding="18dp"
-            android:text="Create Account"
-            android:textColor="#000"
-            android:textSize="20sp" />
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Dreamcatcher"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/grass_shadow"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
 
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track your sleep, improve your health"
+                android:textSize="14sp"
+                android:textColor="@color/grass_shadow"
+                android:layout_marginBottom="32dp"
+                android:gravity="center" />
 
-    </LinearLayout>
+            <!-- Form Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/login_card_bg"
+                android:padding="32dp">
 
-</RelativeLayout>
+                <!-- Name Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="24dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/grass_shadow"
+                        android:layout_marginBottom="8dp" />
 
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Your Name"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:background="@drawable/input_background"
+                        android:textSize="14sp"
+                        android:textColor="@color/mountain_medium_plum"
+                        android:textColorHint="@color/mountain_medium_plum"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <!-- Email Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/grass_shadow"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="your.email@example.com"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:background="@drawable/input_background"
+                        android:textSize="14sp"
+                        android:textColor="@color/mountain_medium_plum"
+                        android:textColorHint="@color/mountain_medium_plum"
+                        android:inputType="textEmailAddress" />
+
+                </LinearLayout>
+
+                <!-- Password Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Password"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/grass_shadow"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Enter your password"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:background="@drawable/input_background"
+                        android:textSize="14sp"
+                        android:textColor="@color/mountain_medium_plum"
+                        android:textColorHint="@color/mountain_medium_plum"
+                        android:inputType="textPassword" />
+
+                </LinearLayout>
+
+                <!-- Confirm Password Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="32dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Confirm Password"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/grass_shadow"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/confirmation"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Confirm your password"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:background="@drawable/input_background"
+                        android:textSize="14sp"
+                        android:textColor="@color/mountain_medium_plum"
+                        android:textColorHint="@color/mountain_medium_plum"
+                        android:inputType="textPassword" />
+
+                </LinearLayout>
+
+                <!-- Sign Up Button -->
+                <Button
+                    android:id="@+id/user_register_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Sign Up"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_signup_background"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Demo Info -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Demo: Use any email and password to register"
+                    android:textSize="12sp"
+                    android:textColor="@color/grass_shadow"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Footer -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SDG 3: Health &amp; Well-Being Tracker"
+                android:textSize="12sp"
+                android:textColor="@color/grass_shadow"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

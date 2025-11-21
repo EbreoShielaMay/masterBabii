@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="gray">#2d3250</color>
-    <color name="ash_gray">#424769</color>
-    <color name="purp_gray">#676f</color>
-    <color name="maroon">#380F17</color>
-    <color name="red">#8F0B13</color>
-    <color name="beige">#EFDFC5</color>
-    <color name="grey">#4C4F54</color>
-    <color name="lavender">#9187F5</color>
-    <color name="dark_navy">#000541</color>
-    <color name="pp">#010440</color>
-    <color name="p1">#0D0E20</color>
+    <color name="sky_deepest_purple">#6B1B47</color>
+    <color name="sky_dark_magenta">#A12B6C</color>
+    <color name="sky_medium_magenta">#C84B7C</color>
+    <color name="sky_bright_pink">#E87BA8</color>
+    <color name="sky_light_pink">#F5C5D8</color>
+    <color name="highlight_white">#FFFFFF</color>
+    <color name="cloud_pale_pink">#F9E8ED</color>
+    <color name="mountain_dark_plum">#5C2E5A</color>
+    <color name="mountain_medium_plum">#85697F</color>
+    <color name="forest_dark">#2D1B3D</color>
+    <color name="grass_shadow">#1A0F2E</color>
+    <color name="water_reflection">#A85B86</color>
+    <color name="stars_light">#F0F0F0</color>
 </resources>

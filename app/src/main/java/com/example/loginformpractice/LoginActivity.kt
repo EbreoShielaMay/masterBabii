@@ -1,5 +1,6 @@
 package com.example.loginformpractice
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -14,6 +15,7 @@ import com.google.firebase.database.database
 
 class LoginActivity : AppCompatActivity() {
 
+    @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_main)
@@ -22,6 +24,7 @@ class LoginActivity : AppCompatActivity() {
         val usernameInput = findViewById<EditText>(R.id.username_input)
         val passwordInput = findViewById<EditText>(R.id.password_input)
         val loginButton = findViewById<Button>(R.id.user_login_button)
+
 
         // Login button listener
         loginButton.setOnClickListener {
@@ -137,7 +140,7 @@ class LoginActivity : AppCompatActivity() {
             val email = sharedPref.getString("email", "")
 
             // User is already logged in, navigate to main activity
-            Intent(this, MainActivity::class.java).also {
+            Intent(this, HomeScreen::class.java).also {
                 it.putExtra("username", username)
                 it.putExtra("name", name)
                 it.putExtra("email", email)

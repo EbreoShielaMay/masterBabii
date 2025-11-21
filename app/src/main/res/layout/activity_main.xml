@@ -1,57 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backg"
+    android:background="@drawable/gradient_background"
     android:gravity="center"
-    android:padding="30dp"
-    tools:context=".MainActivity">
-
-    <LinearLayout
-        android:layout_width="351dp"
-        android:layout_height="641dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-280dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="35dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="50dp"
-            android:text="Welcome!"
-            android:textColor="@color/white"
-            android:textSize="50sp" />
+    android:orientation="horizontal">
 
 
-        <Button
-            android:id="@+id/register_button"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/lavender"
-            android:padding="18dp"
-            android:text="Register"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:background="@color/sky_light_pink"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
 
-        <Button
-            android:id="@+id/login_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32sp"
-            android:backgroundTint="@color/white"
-            android:padding="18dp"
-            android:text="Login"
-            android:textColor="@color/lavender"
-            android:textSize="20sp" />
+            <!-- Logo Section -->
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="48dp">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/logo_gradient_bg"
+                    android:contentDescription="Logo Background" />
 
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="104dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Moon Icon"
+                    android:src="@drawable/ic_dreamcatcher"
+                    app:tint="@android:color/white" />
 
-</RelativeLayout>
+            </FrameLayout>
 
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="SleepWell"
+                android:textColor="@color/sky_deepest_purple"
+                android:textSize="32sp"
+                android:textStyle="bold" />
 
+            <!-- Subtitle 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Your Health &amp; Well-Being Companion"
+                android:textColor="@color/grass_shadow"
+                android:textSize="18sp" />
+
+            <!-- Subtitle 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48dp"
+                android:text="Track your sleep, improve your life"
+                android:textColor="@color/grass_shadow"
+                android:textSize="14sp" />
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_register_background"
+                android:text="Login to Your Account"
+                android:textColor="@color/highlight_white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Register Button -->
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="48dp"
+                android:background="@drawable/button_register_background"
+                android:text="Register New Account"
+                android:textColor="@color/highlight_white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Footer -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="SDG 3: Health &amp; Well-Being Tracker"
+                    android:textColor="@color/grass_shadow"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Promoting healthy sleep habits for better well-being"
+                    android:textColor="@color/grass_shadow"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

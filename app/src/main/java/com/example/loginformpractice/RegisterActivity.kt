@@ -21,7 +21,6 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.register_main)
 
         //bindview
-        val nameInput = findViewById<EditText>(R.id.name)
         val emailInput = findViewById<EditText>(R.id.email)
         val usernameInput = findViewById<EditText>(R.id.username)
         val passwordInput = findViewById<EditText>(R.id.password)
@@ -31,14 +30,12 @@ class RegisterActivity : AppCompatActivity() {
         //listener
         button.setOnClickListener {
             //get text
-            val name = nameInput.text.toString().trim()
             val email = emailInput.text.toString().trim()
             val username = usernameInput.text.toString().trim()
             val password = passwordInput.text.toString()
             val confirmation = confirmationInput.text.toString()
 
             //clear previous errors
-            nameInput.error = null
             emailInput.error = null
             usernameInput.error = null
             passwordInput.error = null
@@ -46,10 +43,6 @@ class RegisterActivity : AppCompatActivity() {
 
             //validate inputs
             when {
-                name.isEmpty() -> {
-                    nameInput.error = "Name is required"
-                    nameInput.requestFocus()
-                }
                 email.isEmpty() -> {
                     emailInput.error = "Email is required"
                     emailInput.requestFocus()
@@ -82,14 +75,13 @@ class RegisterActivity : AppCompatActivity() {
                     //disable button to prevent multiple clicks
                     button.isEnabled = false
                     //check if username exists then add user
-                    checkUsernameAndAddUser(name, email, username, password, button)
+                    checkUsernameAndAddUser(email, username, password, button)
                 }
             }
         }
     }
 
     private fun checkUsernameAndAddUser(
-        name: String,
         email: String,
         username: String,
         password: String,
@@ -111,7 +103,7 @@ class RegisterActivity : AppCompatActivity() {
                     button.isEnabled = true
                 } else {
                     //username available, proceed with registration
-                    addUser(name, email, username, password, button)
+                    addUser( email, username, password, button)
                 }
             }
 
@@ -127,7 +119,6 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun addUser(
-        name: String,
         email: String,
         username: String,
         password: String,
@@ -135,7 +126,6 @@ class RegisterActivity : AppCompatActivity() {
     ) {
         //create hashmap
         val user = hashMapOf(
-            "name" to name,
             "email" to email,
             "username" to username,
             "password" to password
