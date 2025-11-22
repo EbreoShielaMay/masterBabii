@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F4FF"
+    android:background="@drawable/sparkle"
     android:fillViewport="true">
 
 
@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/sky_light_pink">
+        android:background="@drawable/sparkle">
 
         <!-- Header -->
 
@@ -82,25 +82,52 @@
             android:padding="16dp">
 
             <!-- Average Sleep Card -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="165dp"
-                android:layout_marginBottom="24dp"
-                android:background="@drawable/card_background"
-                android:elevation="8dp"
-                android:orientation="horizontal"
-                android:padding="0dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/mountain"
-                android:elevation="5dp"/>
-        </LinearLayout>
 
 
             <!-- Horizontal container for the two cards -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mountain" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- About / Description Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_background"
+                android:elevation="5dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About Dreamcatcher"
+                    android:textColor="#1E293B"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Dreamcatcher is a smart sleep tracking app designed to promote better health and well-being, inspired by Sustainable Development Goal 3 (SDG 3: Good Health and Well-Being). By monitoring your sleep patterns, daily habits, and lifestyle factors, Dreamcatcher helps you understand your sleep quality, optimize rest, and improve overall health."
+                    android:textColor="#475569"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -313,97 +340,9 @@
             </LinearLayout>
 
             <!-- Chart Card -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/card_background"
-                android:elevation="5dp"
-                android:orientation="vertical"
-                android:padding="24dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sleep Hours Over Time"
-                    android:textColor="#1E293B"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Dreamcatcher is a smart sleep tracking app designed to promote better health and well-being, inspired by Sustainable Development Goal 3 (SDG 3: Good Health and Well-Being). By monitoring your sleep patterns, daily habits, and lifestyle factors, Dreamcatcher helps you understand your sleep quality, optimize rest, and improve overall health."
-                    android:textColor="#64748B"
-                    android:textSize="12sp" />
-
-                <!-- Chart Placeholder -->
-                <View
-                    android:id="@+id/sleepChart"
-                    android:layout_width="match_parent"
-                    android:layout_height="280dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="24dp"
-                    android:background="#F8FAFC" />
-
-                <!-- Sleep Recommendation -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:background="@drawable/insight_blue_bg"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Sleep Recommendation"
-                        android:textColor="#1E293B"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/recommendationText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Great work! You're averaging over 7 hours of sleep. Keep maintaining this healthy sleep schedule for optimal well-being."
-                        android:textColor="#475569"
-                        android:textSize="12sp"
-                        android:lineSpacingExtra="2dp" />
-                </LinearLayout>
-
-                <!-- Weekly Progress -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/insight_indigo_bg"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Weekly Progress"
-                        android:textColor="#1E293B"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="This week you achieved your sleep goal 10 times. Consistency is key for developing healthy sleep habits and improving overall wellness."
-                        android:textColor="#475569"
-                        android:textSize="12sp"
-                        android:lineSpacingExtra="2dp" />
-                </LinearLayout>
-            </LinearLayout>
 
             <!-- Logout Button -->
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/logoutButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

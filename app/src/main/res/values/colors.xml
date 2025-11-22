@@ -13,4 +13,6 @@
     <color name="grass_shadow">#1A0F2E</color>
     <color name="water_reflection">#A85B86</color>
     <color name="stars_light">#F0F0F0</color>
+    <color name="button">#FA8D1B</color>
+    <color name="orange">#F8AB5F</color>
 </resources>

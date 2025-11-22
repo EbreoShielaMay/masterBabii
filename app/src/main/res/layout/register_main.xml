@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/gradient_background"
-    android:gravity="center">
+    android:layout_height="match_parent">
 
+    <!-- 🌌 1️⃣ Background photo -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/starry_sky" />
+
+    <!-- ☁️ 2️⃣ Semi-transparent white overlay (low opacity) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#50FFFFFF" />  <!-- 33 = ~20% opacity white -->
+
+    <!-- 🧾 3️⃣ Main content (ScrollView + UI) -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,30 +28,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="24dp"
-            android:background="@color/sky_light_pink">
+            android:padding="24dp">
 
             <!-- Logo and Title Section -->
-            <FrameLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginBottom="32dp">
+            <!-- Logo -->
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/logo_gradient_bg"
+                android:gravity="center"
+                android:elevation="8dp">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/logo_gradient_bg"
-                    android:contentDescription="Logo Background" />
-
-                <ImageView
-                    android:layout_width="105dp"
-                    android:layout_height="104dp"
-                    android:layout_gravity="center"
+                    android:layout_width="58dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/ic_dreamcatcher"
-                    android:contentDescription="Moon Icon"
-                    app:tint="@color/highlight_white" />
-
-            </FrameLayout>
+                    app:tint="#FFFFFF" />
+            </LinearLayout>
 
             <!-- Title -->
             <TextView
@@ -99,7 +103,6 @@
                         android:textColor="@color/mountain_medium_plum"
                         android:textColorHint="@color/mountain_medium_plum"
                         android:inputType="text" />
-
                 </LinearLayout>
 
                 <!-- Email Field -->
@@ -130,7 +133,6 @@
                         android:textColor="@color/mountain_medium_plum"
                         android:textColorHint="@color/mountain_medium_plum"
                         android:inputType="textEmailAddress" />
-
                 </LinearLayout>
 
                 <!-- Password Field -->
@@ -161,7 +163,6 @@
                         android:textColor="@color/mountain_medium_plum"
                         android:textColorHint="@color/mountain_medium_plum"
                         android:inputType="textPassword" />
-
                 </LinearLayout>
 
                 <!-- Confirm Password Field -->
@@ -192,15 +193,14 @@
                         android:textColor="@color/mountain_medium_plum"
                         android:textColorHint="@color/mountain_medium_plum"
                         android:inputType="textPassword" />
-
                 </LinearLayout>
 
                 <!-- Sign Up Button -->
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/user_register_button"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:text="Sign Up"
+                    android:text="Register"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/white"
@@ -215,7 +215,6 @@
                     android:textSize="12sp"
                     android:textColor="@color/grass_shadow"
                     android:gravity="center" />
-
             </LinearLayout>
 
             <!-- Footer -->
@@ -226,9 +225,6 @@
                 android:textSize="12sp"
                 android:textColor="@color/grass_shadow"
                 android:gravity="center" />
-
         </LinearLayout>
-
     </ScrollView>
-
-</LinearLayout>
+</FrameLayout>
