@@ -69,8 +69,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Welcome to Dreamcatcher"
-                    android:textColor="#1E293B"
+                    android:text="Dreamcatcher"
+                    android:fontFamily="@font/lobster"
+                    android:textColor="@color/sky_deepest_purple"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -79,8 +80,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/karla"
                     android:text="Track your sleep, improve your health"
-                    android:textColor="#475569"
+                    android:textColor="@color/grass_shadow"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -128,7 +130,7 @@
                         android:hint="your.email@example.com"
                         android:inputType="textEmailAddress"
                         android:padding="16dp"
-                        android:textColor="#0F172A"
+                        android:textColor="@color/sky_deepest_purple"
                         android:textColorHint="#94A3B8"
                         android:textSize="14sp" />
                 </LinearLayout>
@@ -183,21 +185,13 @@
                     android:background="@drawable/signin_button_bg"
                     android:elevation="8dp"
                     android:padding="16dp"
-                    android:text="Sign In"
+                    android:text="LOGIN"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/karla"/>
 
-                <!-- Demo Info -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="24dp"
-                    android:text="Demo: Use any email and password to login"
-                    android:textColor="#64748B"
-                    android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Footer Section -->

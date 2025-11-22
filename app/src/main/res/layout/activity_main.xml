@@ -4,20 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- 🌌 1️⃣ Background photo -->
+    <!-- Background photo -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/clouds" />
 
-    <!-- ☁️ 2️⃣ Semi-transparent white overlay -->
+    <!-- Semi-transparent white overlay -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#33FFFFFF" /> <!-- about 20% opacity white -->
+        android:background="#30FFFFFF" />
 
-    <!-- 🧾 3️⃣ Foreground UI content -->
+    <!-- Foreground UI content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -56,7 +56,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:text="SleepWell"
+                android:text="Dreamcatcher"
+                android:fontFamily="@font/lobster"
                 android:textColor="@color/sky_deepest_purple"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -68,6 +69,7 @@
                 android:layout_marginBottom="8dp"
                 android:text="Your Health &amp; Well-Being Companion"
                 android:textColor="@color/grass_shadow"
+                android:fontFamily="@font/karla"
                 android:textSize="18sp" />
 
             <!-- Subtitle 2 -->
@@ -77,6 +79,7 @@
                 android:layout_marginBottom="48dp"
                 android:text="Track your sleep, improve your life"
                 android:textColor="@color/grass_shadow"
+                android:fontFamily="@font/karla"
                 android:textSize="14sp" />
 
             <!-- Login Button -->
@@ -89,7 +92,8 @@
                 android:text="Login to Your Account"
                 android:textColor="@color/highlight_white"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/karla"/>
 
             <!-- Register Button -->
             <androidx.appcompat.widget.AppCompatButton
@@ -101,7 +105,8 @@
                 android:text="Register New Account"
                 android:textColor="@color/highlight_white"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/karla"/>
 
             <!-- Footer -->
             <LinearLayout
