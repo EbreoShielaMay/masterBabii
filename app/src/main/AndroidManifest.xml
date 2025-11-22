@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.loginformpractice">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -15,9 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginFormPractice">
 
-        <!-- Main launcher activity -->
+        <!-- LoginActivity as MAIN LAUNCHER -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,9 +26,20 @@
             </intent-filter>
         </activity>
 
-        <!-- Other activities -->
-        <activity android:name=".LoginActivity" android:exported="true"/>
-        <activity android:name=".RegisterActivity" android:exported="true"/>
+        <!-- RegisterActivity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"/>
+
+        <!-- HomeScreen -->
+        <activity
+            android:name=".HomeScreen"
+            android:exported="true"/>
+
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/>
 
     </application>
 

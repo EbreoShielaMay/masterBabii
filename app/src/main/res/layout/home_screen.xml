@@ -58,6 +58,7 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/avatarInitial"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="A"
@@ -67,6 +68,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
